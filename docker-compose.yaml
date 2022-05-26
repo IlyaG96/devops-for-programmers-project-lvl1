@@ -2,13 +2,12 @@ version: '3.8'
 
 services:
   app:
-    build:
-      context: ./app
-      dockerfile: ./Dockerfile
+    image: ilyag96/hexlet-lvl1-project:0.1
     volumes:
       - app:/app/
-    command: npm test
-
+    command: npm run dev
+    ports:
+      - "8080:8080"
 
 volumes:
   app:

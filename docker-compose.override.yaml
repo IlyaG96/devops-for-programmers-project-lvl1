@@ -4,12 +4,5 @@ services:
   app:
     build:
       context: ./app
-      dockerfile: ./Dockerfile.prod
-    volumes:
-      - app:/app/
-    command: npm run dev
-    ports:
-      - "8080:8080"
-
-volumes:
-  app:
+      dockerfile: ./Dockerfile
+    command: npm test
