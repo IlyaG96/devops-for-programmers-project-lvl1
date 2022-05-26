@@ -4,8 +4,8 @@ RUN apt-get update && apt-get install -yq make && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-COPY package.json .
-COPY package-lock.json .
+COPY ./app/package.json .
+COPY ./app/package-lock.json .
 
 RUN npm ci
 
