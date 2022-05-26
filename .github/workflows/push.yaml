@@ -3,7 +3,7 @@ name: push
 on: push
 
 env:
-  APP_IMAGE_NAME: ilyag96/ilyag96/hexlet-lvl1-project
+  APP_IMAGE_NAME: ilyag96/hexlet-lvl1-project
 
 jobs:
   build:
