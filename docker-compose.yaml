@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    command: npm test
+    command: bash -c 'sleep 3 && npm test'
     env_file:
       - ./app/.env.example
     depends_on:
