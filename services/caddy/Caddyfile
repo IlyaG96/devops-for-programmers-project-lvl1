@@ -1,0 +1,13 @@
+localhost {
+  log {
+    format single_field common_log
+  }
+  # Компрессия
+  encode zstd
+  # Самоподписанный сертификат
+  tls internal
+
+  # Проксирование всех запросов в app:8080
+  # app – имя сервиса в docker-compose.yml
+  reverse_proxy /* app:8080
+}
