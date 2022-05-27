@@ -6,8 +6,10 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     command: bash -c 'sleep 3 && npm test'
-    env_file:
-      - ./app/.env.example
+    volumes:
+      - type: bind
+        source: ./app/.env.example
+        target: /app/.env
     depends_on:
       - db
 
