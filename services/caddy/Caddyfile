@@ -1,7 +1,4 @@
 localhost {
-  log {
-    format single_field common_log
-  }
   # Компрессия
   encode zstd
   # Самоподписанный сертификат
