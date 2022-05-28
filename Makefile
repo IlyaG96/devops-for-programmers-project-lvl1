@@ -1,12 +1,12 @@
 run-local:
 	docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 
-ci:
+tests:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 copy-env:
 	cp ./app/.env.example ./app/.env || true
 
-tests: copy-env ci
+ci: copy-env tests
 
 setup-local: copy-env run-local
