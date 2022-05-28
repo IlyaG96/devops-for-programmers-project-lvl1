@@ -6,7 +6,6 @@ services:
       context: .
       dockerfile: Dockerfile.prod
     image: ilyag96/hexlet-lvl1-project:latest
-    command: bash -c 'sleep 3 && npm test'
     volumes:
   #    - type: bind  unfortunately useless for hexlet checks :(
   #      source: ./app/.env.example
@@ -16,12 +15,18 @@ services:
       - ./.env
     depends_on:
       - db
+    command: bash -c 'sleep 3 && npm test'
 
   db:
     image: postgres
+    volumes:
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
       POSTGRES_DB: postgres
+
+volumes:
+  pgdata:
