@@ -23,7 +23,7 @@ make setup-local
 Для запуска **тестов** используйте:
 
 ```shell
-make tests
+make ci
 ```
 
 ### Hexlet tests and linter status:
