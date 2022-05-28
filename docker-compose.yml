@@ -21,3 +21,6 @@ services:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: pgpassword
       POSTGRES_DB: psqlbase
+
+volumes:
+  app:
