@@ -21,6 +21,7 @@ services:
     image: postgres
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - node_modules:/app/node_modules
     ports:
       - "5432:5432"
     environment:
@@ -30,3 +31,4 @@ services:
 
 volumes:
   pgdata:
+  node_modules:
