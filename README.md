@@ -13,7 +13,7 @@ make setup-local
 ```
 или:
 ```shell
-docker-compose -f docker-compose.yaml -f docker-compose.override.yaml up --build
+docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 ```
 
 Приложение будет доступно по адресам:
@@ -28,7 +28,7 @@ make tests
 ```
 или
 ```shell
-docker-compose -f docker-compose.yaml up --build --abort-on-container-exit
+docker-compose -f docker-compose.yml up --build --abort-on-container-exit
 ```
 
 ### Hexlet tests and linter status:
