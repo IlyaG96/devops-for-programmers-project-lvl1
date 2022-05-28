@@ -2,6 +2,8 @@
 
 ####Учебный проект онлайн-школы [Хекслет](https://ru.hexlet.io).
 
+Проект на [Docker-hub](https://hub.docker.com/repository/docker/ilyag96/hexlet-lvl1-project).
+
 Для запуска проекта установите: 
 - [Docker](https://docs.docker.com/engine/install/ubuntu/)
 - [Docker-Compose](https://docs.docker.com/compose/install/)
@@ -26,10 +28,11 @@ docker-compose -f docker-compose.yml -f docker-compose.override.yml up --build
 ```shell
 make tests
 ```
-или
+или:
 ```shell
 docker-compose -f docker-compose.yml up --build --abort-on-container-exit
 ```
+
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/IlyaG96/devops-for-programmers-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/IlyaG96/devops-for-programmers-project-lvl1/actions)
