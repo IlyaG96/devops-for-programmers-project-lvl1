@@ -1,16 +1,10 @@
-version: "3.8"
-
+version: "2"
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: ilyag96/hexlet-lvl1-project:latest
-    volumes:
-  #    - type: bind  unfortunately useless for hexlet checks :(
-  #      source: ./app/.env.example
-  #      target: /app/.env
-      - ./app:/app
+    image: ilyag96/ilyag96/hexlet-lvl1-project:latest
     environment:
       - ./.env
     depends_on:
@@ -19,11 +13,9 @@ services:
 
   db:
     image: postgres
+    restart: always
     volumes:
       - pgdata:/var/lib/postgresql/data
-      - node_modules:/app/node_modules
-    ports:
-      - "5432:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
@@ -31,4 +23,3 @@ services:
 
 volumes:
   pgdata:
-  node_modules:
