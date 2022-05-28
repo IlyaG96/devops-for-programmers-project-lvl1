@@ -7,9 +7,12 @@ services:
       dockerfile: Dockerfile.prod
     command: bash -c 'sleep 3 && npm test'
     volumes:
-      - type: bind
-        source: ./app/.env.example
-        target: /app/.env
+  #    - type: bind  unfortunately useless for hexlet checks :(
+  #      source: ./app/.env.example
+  #      target: /app/.env
+      - ./app:/app
+    environment:
+      - ./.env
     depends_on:
       - db
 
@@ -21,6 +24,3 @@ services:
       POSTGRES_USER: username
       POSTGRES_PASSWORD: pgpassword
       POSTGRES_DB: psqlbase
-
-volumes:
-  app:
