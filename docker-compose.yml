@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
-    image: ilyag96/ilyag96/hexlet-lvl1-project:latest
+    image: ilyag96/hexlet-lvl1-project:latest
     environment:
       - ./.env
     depends_on:
