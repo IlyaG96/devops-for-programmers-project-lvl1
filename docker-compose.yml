@@ -21,6 +21,6 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: username
-      POSTGRES_PASSWORD: pgpassword
-      POSTGRES_DB: psqlbase
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: postgres
