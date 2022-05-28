@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+    image: ilyag96/hexlet-lvl1-project:latest
     command: bash -c 'sleep 3 && npm test'
     volumes:
   #    - type: bind  unfortunately useless for hexlet checks :(
