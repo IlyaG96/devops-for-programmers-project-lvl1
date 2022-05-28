@@ -31,7 +31,7 @@ jobs:
           tags: ${{ env.APP_IMAGE_NAME }}:cached
 
       - name: tests
-        run: make tests
+        run: make ci
 
       - name: push
         uses: docker/build-push-action@v2
